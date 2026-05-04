@@ -1,0 +1,187 @@
+---
+import data from '../data/portfolio.json';
+
+// Pega a imagem do JSON e formata para o CSS, ou usa 'none' se não existir
+const backgroundImage = data.config?.backgroundImage ? `url('${data.config.backgroundImage}')` : 'none';
+---
+
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{data.profile.name} - {data.profile.title}</title>
+  </head>
+  <body>
+    <main class="container">
+      
+      <!-- Cabeçalho com Foto -->
+      <header class="hero">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>{data.profile.name}</h1>
+            <h2 class="title">> {data.profile.title}_</h2>
+            <p class="about">{data.profile.about}</p>
+            
+            <div class="links">
+              <a href={data.profile.github} target="_blank">GitHub</a>
+              <a href={data.profile.linkedin} target="_blank">LinkedIn</a>
+              <a href={`mailto:${data.profile.email}`}>Email</a>
+            </div>
+          </div>
+          
+          {data.profile.image && (
+            <div class="hero-image-wrapper">
+              <img src={data.profile.image} alt={`Foto de ${data.profile.name}`} class="profile-img" />
+            </div>
+          )}
+        </div>
+      </header>
+
+      <!-- Seção de Skills -->
+      <section class="skills-section">
+        <h3>Tech Stack</h3>
+        <div class="skills-grid">
+          {Object.entries(data.skills).map(([category, skills]) => (
+            <div class="skill-category">
+              <h4>{category}</h4>
+              <ul class="skill-list">
+                {skills.map(skill => <li>{skill}</li>)}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Seção de Experiência -->
+      <section class="experience-section">
+        <h3>Experiência Profissional</h3>
+        <div class="timeline">
+          {data.experience.map(job => (
+            <article class="job">
+              <div class="job-header">
+                <h4>{job.role}</h4>
+                <span class="period">{job.period}</span>
+              </div>
+              <span class="company">{job.company}</span>
+              <p>{job.description}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <!-- Seção de Projetos com Cards -->
+      <section class="projects-section">
+        <h3>Projetos em Destaque</h3>
+        <div class="projects-grid">
+          {data.projects.map(project => (
+            <a href={project.link} target="_blank" class="project-card">
+              {project.image && (
+                <div class="project-img-container">
+                  <img src={project.image} alt={`Capa do projeto ${project.name}`} class="project-img" />
+                </div>
+              )}
+              <div class="project-content">
+                <h4>{project.name}</h4>
+                <p>{project.description}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+      
+    </main>
+  </body>
+</html>
+
+<!-- O define:vars injeta as variáveis do JS diretamente no CSS abaixo -->
+<style define:vars={{ backgroundImage }}>
+  :root {
+    --bg-color: #0f172a;
+    --container-bg: rgba(15, 23, 42, 0.95); /* Fundo do texto (95% opaco) */
+    --text-main: #e2e8f0;
+    --text-muted: #94a3b8;
+    --accent: #38bdf8;
+    --card-bg: #1e293b;
+    --border: #334155;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: var(--text-main);
+    line-height: 1.6;
+    
+    /* Configurações do Background injetado pelo JSON */
+    background-color: var(--bg-color); /* Fallback caso a imagem falhe */
+    background-image: var(--backgroundImage);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Deixa o fundo parado enquanto você dá scroll */
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    min-height: 100vh; /* Garante que o container desça até o fim da tela */
+    background-color: var(--container-bg); /* Cor de fundo só onde tem conteúdo */
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.8); /* Sombra elegante nas bordas laterais */
+  }
+
+  h1, h2, h3, h4 { color: #ffffff; }
+  h3 { 
+    margin-bottom: 1.5rem; 
+    border-bottom: 1px solid var(--border); 
+    padding-bottom: 0.5rem;
+  }
+
+  /* Hero Section */
+  .hero { margin-bottom: 4rem; }
+  .hero-content { display: flex; align-items: center; gap: 3rem; justify-content: space-between; }
+  .hero-text { flex: 1; }
+  .hero h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+  .hero .title { font-family: 'Courier New', Courier, monospace; color: var(--accent); font-weight: normal; margin-bottom: 1.5rem; }
+  .hero .about { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 2rem; }
+  
+  .hero-image-wrapper { flex-shrink: 0; }
+  .profile-img { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 3px solid var(--border); box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5); transition: border-color 0.3s; }
+  .profile-img:hover { border-color: var(--accent); }
+
+  @media (max-width: 600px) {
+    .hero-content { flex-direction: column-reverse; text-align: center; gap: 1.5rem; }
+    .links { display: flex; justify-content: center; gap: 1.5rem; }
+    .links a { margin-right: 0; }
+  }
+
+  .links a { color: var(--accent); text-decoration: none; margin-right: 1.5rem; font-weight: 500; border-bottom: 1px dashed var(--accent); }
+  .links a:hover { border-bottom-style: solid; }
+
+  /* Skills Grid */
+  .skills-section { margin-bottom: 4rem; }
+  .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; }
+  .skill-category h4 { margin-bottom: 1rem; color: var(--text-muted); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; }
+  .skill-list { list-style: none; }
+  .skill-list li { display: inline-block; background: var(--card-bg); border: 1px solid var(--border); padding: 0.25rem 0.75rem; border-radius: 4px; font-size: 0.85rem; margin: 0 0.5rem 0.5rem 0; font-family: 'Courier New', Courier, monospace; }
+
+  /* Experiência */
+  .experience-section { margin-bottom: 4rem; }
+  .job { margin-bottom: 2rem; }
+  .job-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.25rem;}
+  .job-header h4 { font-size: 1.2rem; }
+  .job .period { color: var(--text-muted); font-size: 0.9rem; }
+  .job .company { color: var(--accent); font-weight: 500; display: block; margin-bottom: 0.75rem; }
+  .job p { color: var(--text-muted); }
+
+  /* Projetos */
+  .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+  .project-card { display: flex; flex-direction: column; background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; text-decoration: none; overflow: hidden; transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s; }
+  .project-card:hover { transform: translateY(-4px); border-color: var(--accent); box-shadow: 0 10px 20px -10px rgba(0,0,0,0.5); }
+  .project-img-container { width: 100%; height: 160px; border-bottom: 1px solid var(--border); }
+  .project-img { width: 100%; height: 100%; object-fit: cover; }
+  .project-content { padding: 1.5rem; display: flex; flex-direction: column; flex-grow: 1; }
+  .project-content h4 { color: var(--accent); margin-bottom: 0.5rem; }
+  .project-content p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; }
+</style>

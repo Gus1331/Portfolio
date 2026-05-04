@@ -1,0 +1,46 @@
+{
+"config": {
+    "backgroundImage": "/background.jpg"
+  },
+  "profile": {
+    "name": "Gustavo Souza",
+    "title": "Desenvolvedor",
+    "image": "/profile.jpg",
+    "email": "gustavooliver.souza@gmail.com",
+    "github": "https://github.com/Gus1331",
+    "linkedin": "https://linkedin.com/in/gustavooliveiraaa",
+    "about": "Lorem"
+  },
+  "skills": {
+    "Backend & Arquitetura": ["Java", "Spring Boot", "APIs RESTful"],
+    "Cloud & DevOps": ["AWS", "Docker", "CI/CD", "Terraform"]
+  },
+  "experience": [
+    {
+      "role": "Desenvolvedor",
+      "company": "Empresa",
+      "period": "2023 - Presente",
+      "description": "Lorem"
+    },
+    {
+      "role": "Desenvolvedor",
+      "company": "Empresa",
+      "period": "2023 - Presente",
+      "description": "Lorem"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Projeto",
+      "description": "Lorem",
+      "link": "https://github.com/Gus1331/",
+      "image": "/profile.jpg"
+    },
+    {
+      "name": "Projeto",
+      "description": "Lorem",
+      "link": "https://github.com/Gus1331/",
+      "image": "/profile.jpg"
+    }
+  ]
+}
