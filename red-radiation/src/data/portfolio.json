@@ -5,7 +5,7 @@
   "profile": {
     "name": "Gustavo Souza",
     "title": "Engenheiro de Software Junior | Backend Developer",
-    "image": "/profile.jpg",
+    "image": "/Portfolio/profile.jpg",
     "email": "gustavooliver.souza@gmail.com",
     "github": "https://github.com/Gus1331",
     "linkedin": "https://linkedin.com/in/gustavooliveiraaa",
@@ -52,37 +52,37 @@
       "name": "Aplicação Web/Mobile para Sorveteria",
       "description": "Backend Java/Spring Boot com APIs REST escaláveis, testes unitários (JUnit), Docker e deploy na AWS com pipeline CI/CD.",
       "link": "https://mestresorvete.com/",
-      "image": "/projects/project00.png"
+      "image": "/Portfolio/projects/project00.png"
     },
     {
       "name": "Aplicação Web para Serviço de buffet",
       "description": "Site promocional estático de um serviço de buffet com Continuos Deployment e SEO (Search Engine Optimization).",
       "link": "https://marqsbuffet.com/",
-      "image": "/projects/project01.png"
+      "image": "/Portfolio/projects/project01.png"
     },
     {
       "name": "API de Organização Financeira",
       "description": "API REST em Python/Flask integrada ao Elasticsearch e Kibana para análise de dados e conversão de moedas em tempo real.",
       "link": "https://github.com/Gus1331/Finance-API",
-      "image": "/projects/project02.png"
+      "image": "/Portfolio/projects/project02.png"
     },
     {
       "name": "Sistema Hospitalar de Monitoramento",
       "description": "Aplicação Java com JDBC e SQL Server para coleta de métricas de hardware (CPU/RAM) e sistema de logging para auditoria.",
       "link": "https://github.com/Grupo-4-MedTech/MedTech",
-      "image": "/projects/project03.png"
+      "image": "/Portfolio/projects/project03.png"
     },
     {
       "name": "Minishell",
       "description": "Um shell próprio em C para executar comandos, redirecionamentos, manipulação de ambiente e navegação de arquivos.",
       "link": "https://github.com/42-Partners/Minishell",
-      "image": "/projects/project04.png"
+      "image": "/Portfolio/projects/project04.png"
     },
     {
       "name": "Cub3d",
       "description": "Simulação 3D em C usando raycasting, com randerização de textura e animações.",
       "link": "https://github.com/42-Partners/cub3d",
-      "image": "/projects/project05.png"
+      "image": "/Portfolio/projects/project05.png"
     }
   ]
 }
