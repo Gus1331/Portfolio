@@ -1,46 +1,88 @@
 {
-"config": {
+  "config": {
     "backgroundImage": "/background.jpg"
   },
   "profile": {
     "name": "Gustavo Souza",
-    "title": "Desenvolvedor",
+    "title": "Engenheiro de Software Junior | Backend Developer",
     "image": "/profile.jpg",
     "email": "gustavooliver.souza@gmail.com",
     "github": "https://github.com/Gus1331",
     "linkedin": "https://linkedin.com/in/gustavooliveiraaa",
-    "about": "Lorem"
+    "about": "Engenheiro de Software focado em desenvolvimento backend com Java, Spring Boot e soluções em cloud. Experiência com integração de APIs, conteinerização e metodologias ágeis, buscando sempre entregar soluções escaláveis que gerem valor real ao cliente final."
   },
   "skills": {
-    "Backend & Arquitetura": ["Java", "Spring Boot", "APIs RESTful"],
-    "Cloud & DevOps": ["AWS", "Docker", "CI/CD", "Terraform"]
+    "Linguagens": ["Java", "Python", "C", "C++", "Kotlin", "JavaScript", "SQL"],
+    "Backend & APIs": ["Spring Boot", "Flask", "Node.js", "RESTful APIs","SOAP", "JUnit"],
+    "Cloud & DevOps": ["AWS", "Azure", "GCP", "Docker", "Terraform", "GitHub Actions", "CI/CD"],
+    "Arquitetura & Práticas": ["SOLID", "TDD", "Scrum", "Design Patterns", "Clean Code", "Kanban"],
+    "Bancos de Dados & Tools": ["MySQL", "PostgreSQL", "SQL Server", "ElasticSearch"],
+    "Outros" : ["Git", "Linux", "HTML", "CSS", "React", "Salesforce"]
   },
   "experience": [
     {
-      "role": "Desenvolvedor",
-      "company": "Empresa",
-      "period": "2023 - Presente",
-      "description": "Lorem"
+      "role": "Desenvolvedor Web Freelancer",
+      "company": "Autônomo",
+      "period": "Jul 2025 - Nov 2025",
+      "description": "Desenvolvimento de aplicações full-stack com Java/Spring Boot e React. Configuração de pipelines CI/CD no GitHub Actions com deploy em AWS e Azure, além de conteinerização com Docker."
     },
     {
-      "role": "Desenvolvedor",
-      "company": "Empresa",
-      "period": "2023 - Presente",
-      "description": "Lorem"
+      "role": "Desenvolvedor Backend Salesforce (Estágio)",
+      "company": "elera.io",
+      "period": "Fev 2024 - Mar 2025",
+      "description": "Desenvolvimento de soluções backend e integração de sistemas via Web Services REST. Atuação com metodologias ágeis (Scrum/Kanban) e foco em análise de logs e troubleshooting."
+    }
+  ],
+  "education": [
+    {
+      "institution": "42 São Paulo",
+      "degree": "Engenharia de Software",
+      "period": "Mai 2025 - Ago 2026 (Em andamento)",
+      "description": "Formação imersiva baseada em metodologia peer-to-peer, exigindo alto grau de autonomia, proatividade e foco em resultados. Aprofundamento em resolução de problemas complexos, estruturas de dados e otimização de performance em C/C++, construindo a base computacional essencial para arquitetar sistemas backend de alta resiliência e processamento de dados."
+    },
+    {
+      "institution": "SPTech School",
+      "degree": "Análise e Desenvolvimento de Sistemas",
+      "period": "2023 - Jul 2025 (Concluído)",
+      "description": "Desenvolvimento prático de software com forte alinhamento às demandas de mercado e metodologias ágeis. Foco na engenharia de projetos ponta a ponta, consolidando boas práticas de modelagem de dados, arquitetura de sistemas e ciclo de vida de desenvolvimento para a entrega de soluções escaláveis e orientadas a valor de negócio."
     }
   ],
   "projects": [
     {
-      "name": "Projeto",
-      "description": "Lorem",
-      "link": "https://github.com/Gus1331/",
-      "image": "/profile.jpg"
+      "name": "Aplicação Web/Mobile para Sorveteria",
+      "description": "Backend Java/Spring Boot com APIs REST escaláveis, testes unitários (JUnit), Docker e deploy na AWS com pipeline CI/CD.",
+      "link": "https://mestresorvete.com/",
+      "image": "/projects/project00.png"
     },
     {
-      "name": "Projeto",
-      "description": "Lorem",
-      "link": "https://github.com/Gus1331/",
-      "image": "/profile.jpg"
+      "name": "Aplicação Web para Serviço de buffet",
+      "description": "Site promocional estático de um serviço de buffet com Continuos Deployment e SEO (Search Engine Optimization).",
+      "link": "https://marqsbuffet.com/",
+      "image": "/projects/project01.png"
+    },
+    {
+      "name": "API de Organização Financeira",
+      "description": "API REST em Python/Flask integrada ao Elasticsearch e Kibana para análise de dados e conversão de moedas em tempo real.",
+      "link": "https://github.com/Gus1331/Finance-API",
+      "image": "/projects/project02.png"
+    },
+    {
+      "name": "Sistema Hospitalar de Monitoramento",
+      "description": "Aplicação Java com JDBC e SQL Server para coleta de métricas de hardware (CPU/RAM) e sistema de logging para auditoria.",
+      "link": "https://github.com/Grupo-4-MedTech/MedTech",
+      "image": "/projects/project03.png"
+    },
+    {
+      "name": "Minishell",
+      "description": "Um shell próprio em C para executar comandos, redirecionamentos, manipulação de ambiente e navegação de arquivos.",
+      "link": "https://github.com/42-Partners/Minishell",
+      "image": "/projects/project04.png"
+    },
+    {
+      "name": "Cub3d",
+      "description": "Simulação 3D em C usando raycasting, com randerização de textura e animações.",
+      "link": "https://github.com/42-Partners/cub3d",
+      "image": "/projects/project05.png"
     }
   ]
 }
