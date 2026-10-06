@@ -4,7 +4,7 @@
   },
   "profile": {
     "name": "Gustavo Souza",
-    "title": "Engenheiro de Software Junior | Backend Developer",
+    "title": "Engenheiro de Software | Backend Developer",
     "image": "/Portfolio/profile.jpg",
     "email": "gustavooliver.souza@gmail.com",
     "github": "https://github.com/Gus1331",
@@ -20,6 +20,12 @@
     "Outros" : ["Git", "Linux", "HTML", "CSS", "React", "Salesforce"]
   },
   "experience": [
+    {
+      "role": "Técnico Audiovisual",
+      "company": "CBRE",
+      "period": "Jun 2026 - Atual",
+      "description": "Suporte com equipamentos de áudio e vídeo na Ernst & Young (EY) SP JK. Manutenção preventiva e preditiva de equipamentos, automação de sistemas e checklists."
+    },
     {
       "role": "Desenvolvedor Web Freelancer",
       "company": "Autônomo",
@@ -37,7 +43,7 @@
     {
       "institution": "42 São Paulo",
       "degree": "Engenharia de Software",
-      "period": "Mai 2025 - Ago 2026 (Em andamento)",
+      "period": "Mai 2025 - Atual (Em progresso)",
       "description": "Formação imersiva baseada em metodologia peer-to-peer, exigindo alto grau de autonomia, proatividade e foco em resultados. Aprofundamento em resolução de problemas complexos, estruturas de dados e otimização de performance em C/C++, construindo a base computacional essencial para arquitetar sistemas backend de alta resiliência e processamento de dados."
     },
     {
